@@ -3,7 +3,12 @@ let input = document.getElementById("input");
 
 let add = document.getElementById("add");
 // console.log(add);
-
+let total = document.querySelector("#total");
+// console.log(total);
+let completed = document.querySelector("#completed");
+// console.log(completed);
+let checkCount = 0;
+let totalCount = 0;
 let idCount = 0;
 let arr = [];
 let list = document.getElementById("list");
@@ -32,21 +37,32 @@ add.addEventListener("click", () => {
   list.lastElementChild.innerHTML = frame;
   console.log();
   idCount++;
+  totalCount++;
+  events();
   input.value = "";
 });
 
 let toDoSection = document.querySelector(".to-do-section");
 
 toDoSection.addEventListener("click", (e) => {
+  let checkStatus = arr[e.target.parentElement.id][1];
   if (e.target.classList.contains("fa-solid")) {
+    if (!checkStatus) {
+      checkCount--;
+    }
     e.target.parentElement.parentElement.remove();
+    totalCount--;
+    events();
   }
   if (e.target.classList.contains("list-item")) {
-    let checkStatus = arr[e.target.parentElement.id][1];
-    checkStatus
-      ? (arr[e.target.parentElement.id][1] = false)
-      : (arr[e.target.parentElement.id][1] = true);
-
+    if (checkStatus) {
+      arr[e.target.parentElement.id][1] = false;
+      checkCount++;
+    } else {
+      arr[e.target.parentElement.id][1] = true;
+      checkCount--;
+    }
+    events();
     if (checkStatus) {
       e.target.nextElementSibling.style = "text-decoration:line-through";
     } else {
@@ -54,3 +70,8 @@ toDoSection.addEventListener("click", (e) => {
     }
   }
 });
+
+let events = function () {
+  total.innerHTML = totalCount;
+  completed.innerHTML = checkCount;
+};
