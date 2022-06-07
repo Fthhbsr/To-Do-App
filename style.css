@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  font-size: 3rem;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  height: 80vh;
+  border: 3px solid red;
+}
+
+.input-section {
+  border: 2px solid blue;
+  height: 10vh;
+}
+
+#input {
+  height: 2rem;
+  width: 20rem;
+  font-size: 1.2rem;
+}
+
+#add {
+  width: 5rem;
+  height: 2.2rem;
+  font-size: 1.2rem;
+  background-color: aqua;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.to-do-section {
+  border: 2px solid greenyellow;
+  width: 50%;
+}
+
+#list {
+  list-style-type: none;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 2rem;
+}
