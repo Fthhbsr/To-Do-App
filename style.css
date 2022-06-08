@@ -1,23 +1,41 @@
+/* font-family: 'Caveat', cursive;
+font-family: 'Gloria Hallelujah', cursive;
+font-family: 'Lobster', cursive;
+font-family: 'Permanent Marker', cursive; */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  /* background-image: url(./images/sheet.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center; */
+}
+
 header {
-  font-size: 3rem;
+  font-size: 2.2rem;
   height: 20vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  padding-bottom: 0.8vh;
+  font-family: "Permanent Marker", "Caveat", "Lobster";
 }
 
 .container {
+  background-image: url(./images/sheet.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
-  height: 80vh;
+  height: 100vh;
   border: 3px solid red;
 }
 
@@ -30,6 +48,13 @@ header {
   height: 2rem;
   width: 20rem;
   font-size: 1.2rem;
+  font-family: "Gloria Hallelujah";
+  border-radius: 0.5rem;
+
+  border: 2px solid rgba(166, 93, 45, 0.721);
+}
+#input:hover {
+  border: 2px solid rgba(166, 93, 45, 0.721);
 }
 
 #add {
@@ -38,12 +63,13 @@ header {
   font-size: 1.2rem;
   background-color: aqua;
   border-radius: 0.5rem;
-  margin-top: 0.5rem;
+  margin-top: 0.3rem;
+  font-family: "Permanent Marker";
 }
 
 .to-do-section {
   border: 2px solid greenyellow;
-  width: 50%;
+  width: 35%;
 }
 
 #list {
@@ -56,4 +82,5 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 2rem;
+  font-family: "Gloria Hallelujah";
 }
