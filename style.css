@@ -14,6 +14,7 @@ body {
 }
 
 header {
+  color: rgb(176, 13, 13);
   font-size: 2.2rem;
   height: 20vh;
   display: flex;
@@ -63,10 +64,11 @@ header {
 }
 
 .add {
+  color: white;
   width: 5rem;
   height: 2.2rem;
   font-size: 1.2rem;
-  background-color: rgb(166, 94, 53);
+  background-color: rgb(176, 13, 13);
   border-radius: 0.5rem;
   margin-top: 0.3rem;
   font-family: "Permanent Marker";
@@ -118,5 +120,10 @@ header {
   font-family: "Permanent Marker";
   font-size: 1.3rem;
   position: fixed;
-  bottom: 1.5rem;
+  bottom: 2rem;
+  height: 5vh;
+}
+.counter p {
+  min-width: 15rem;
+  margin-bottom: 1rem;
 }
