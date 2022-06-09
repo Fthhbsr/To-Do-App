@@ -10,10 +10,7 @@ font-family: 'Permanent Marker', cursive; */
 }
 
 body {
-  /* background-image: url(./images/sheet.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center; */
+  text-align: center;
 }
 
 header {
@@ -27,20 +24,31 @@ header {
 }
 
 .container {
+  background-color: darkgray;
   background-image: url(./images/sheet.png);
-  background-repeat: no-repeat;
+  height: 100vh;
   background-size: contain;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+
+  /* background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
   height: 100vh;
-  border: 3px solid red;
+  border: 3px solid red;*/
 }
 
 .input-section {
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   height: 10vh;
 }
 
@@ -53,27 +61,30 @@ header {
 
   border: 2px solid rgba(166, 93, 45, 0.721);
 }
-#input:hover {
-  border: 2px solid rgba(166, 93, 45, 0.721);
-}
 
-#add {
+.add {
   width: 5rem;
   height: 2.2rem;
   font-size: 1.2rem;
-  background-color: aqua;
+  background-color: rgb(166, 94, 53);
   border-radius: 0.5rem;
   margin-top: 0.3rem;
   font-family: "Permanent Marker";
 }
 
-.to-do-section {
+/* .to-do-section {
   border: 2px solid greenyellow;
-  width: 35%;
-}
+  height: 60vh;
+} */
 
 #list {
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  height: 60vh;
+  overflow-y: scroll;
+  overflow-wrap: break-word;
 }
 
 .list-item {
@@ -81,6 +92,31 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 2rem;
+  height: 2.5rem;
   font-family: "Gloria Hallelujah";
+  font-size: 1.2rem;
+  background-color: antiquewhite;
+  border-bottom: 2px solid rgba(166, 93, 45, 0.721);
+}
+.checkbox {
+  margin-left: 0.5rem;
+}
+
+.to-do {
+  max-width: 20rem;
+}
+
+.fa-solid {
+  margin-right: 0.5rem;
+}
+
+.counter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 35%;
+  font-family: "Permanent Marker";
+  font-size: 1.3rem;
+  position: fixed;
+  bottom: 1.5rem;
 }
